@@ -15,7 +15,13 @@ Zusätzlich kann für Beckhoff der Code für ein **Signalmapping-Baustein** erze
 - 🖱️ Intuitive Benutzeroberfläche
 
 ---
+## 📷 Vorschau
 
+<img width="786" height="443" alt="image" src="https://github.com/user-attachments/assets/763ba628-a8a7-4081-bba5-8e2b306fc9b5" />
+
+<img width="1921" height="1032" alt="image" src="https://github.com/user-attachments/assets/8340decd-432e-4c68-959d-3146dba3c4b4" />
+
+---
 ## 🧑‍💻 Quickstart
 
 ### 1. Repository klonen
