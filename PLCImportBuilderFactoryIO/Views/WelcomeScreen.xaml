@@ -1,0 +1,56 @@
+﻿<Window x:Class="PLCImportBuilderFactoryIO.Views.WelcomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLCImportBuilderFactoryIO.Views"
+        mc:Ignorable="d"
+        WindowStyle="None" Background="Beige"
+        Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="MinWidth" Value="250"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+               HorizontalAlignment="Center"
+               Content="Bitte Zielsteuerung auswählen:"/>
+        <Button Grid.Column="0" Grid.Row="1"
+                Content="Siemens"
+                Command="{Binding OpenWorkScreen}" CommandParameter="Siemens"/>
+        <Button Grid.Column="1" Grid.Row="1"
+                Content="Beckhoff"
+                Command="{Binding OpenWorkScreen}" CommandParameter="Beckhoff"/>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"
+                Content="Anwendung schließen"
+                Command="{Binding CloseScreen}"/>
+    </Grid>
+</Window>
