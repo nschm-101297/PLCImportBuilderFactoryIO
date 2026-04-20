@@ -15,7 +15,7 @@ Additionally, it can generate code for a signal mapping function block for Beckh
 - 🖱️ Intuitive user interface 
 
 ---
-## 📷 Vorschau
+## 📷 Preview
 
 <img width="786" height="443" alt="image" src="https://github.com/user-attachments/assets/763ba628-a8a7-4081-bba5-8e2b306fc9b5" />
 
