@@ -47,6 +47,10 @@
             <Setter Property="AutoGenerateColumns" Value="False"/>
             <Setter Property="CanUserAddRows" Value="False"/>
         </Style>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Stretch" Value="UniformToFill"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -79,8 +83,11 @@
                                 UpdateSourceTrigger=PropertyChanged,
                                 Mode=TwoWay}"/>
                 <Button Grid.Column="3" Grid.Row="0"
-                        Content="Öffnen"
-                        Command="{Binding OpenFileDialogFactoryIOFile}"/>
+                        Command="{Binding OpenFileDialogFactoryIOFile}">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/Images/File_Open.png"/>
+                    </StackPanel>
+                </Button>
                 <Label Grid.Column="0" Grid.Row="1"
                        Content="Pfad Export-Datei:"/>
                 <TextBox Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"
@@ -88,8 +95,11 @@
                          UpdateSourceTrigger=PropertyChanged,
                          Mode=TwoWay}"/>
                 <Button Grid.Column="3" Grid.Row="1"
-                        Content="Öffnen"
-                        Command="{Binding OpenFolderDialogExportFile}"/>
+                        Command="{Binding OpenFolderDialogExportFile}">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/Images/Folder_Open.png"/>
+                    </StackPanel>
+                </Button>
                 <Label Grid.Column="0" Grid.Row="2"
                        Content="Export-Format:"/>
                 <ComboBox Grid.Column="1" Grid.Row="2" Margin="5"
@@ -129,8 +139,11 @@
                                           UpdateSourceTrigger=PropertyChanged,
                                           Mode=TwoWay}"/>
                 <Button Grid.Column="3" Grid.Row="3"
-                        Content="Schreiben"
-                        Command="{Binding CreateExportFile}"/>
+                        Command="{Binding CreateExportFile}">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/Images/Write_Mapping.png"/>
+                    </StackPanel>
+                </Button>
             </Grid>
         </GroupBox>
         <TabControl Grid.Row="1" Margin="5"
